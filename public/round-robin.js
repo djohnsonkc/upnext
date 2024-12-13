@@ -1,5 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const nameList = "Alex,Ben R,Ben W,Chris,Dan,Emily,Fiona,Grace,Hannah,Ian,James,Karen,Liam,Noah,Olivia,Parker,Quinn,Rachel".split(",");
+    let nameList = "Alex,Ben R,Ben W,Chris,Dan,Emily,Fiona,Grace,Hannah,Ian,James,Karen,Liam,Noah,Olivia,Parker,Quinn,Rachel".split(",");
+    const urlParams = new URLSearchParams(window.location.search);
+    const names = urlParams.get('names');
+    if(names) {
+        nameList = names.split(",");
+    }
+
+
     const containerSize = 500;
     const radius = 210;
     const smallCircleSize = 80;
@@ -38,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                             ${name}
                         </div>`).join('')}
                 </div>
-                <div class="mt-5">
+                <div class="mt-5" style="margin-top: 20px;">
                     <a href="#" class="btn-link-off" id="reset">Reset</a>
                 </div>
             </div>
