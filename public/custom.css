@@ -1,0 +1,72 @@
+/* Custom styles that override a few of the LCARs styles and add few new ones */
+
+@media (max-width: 1000px) {
+    .buttons a {
+        width: inherit !important;
+        height: inherit !important;
+        padding-bottom: inherit !important;
+        line-height: 2rem !important;
+    }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.selected {
+    color: white !important;
+    background-color: gray !important;
+    opacity: .2 !important;
+}
+
+nav a {
+    text-wrap: nowrap !important;
+}
+
+@media (max-width: 1000px) {
+    nav a {
+        width: 200px !important;
+        height: inherit !important;
+        padding-bottom: inherit !important;
+        line-height: 2rem !important;
+    }
+}
+
+@media (max-width: 500px) {
+    h1 {
+        font-size: 32px !important;
+    }
+}
+
+.no-wrap {
+    text-wrap: nowrap !important;
+}
+
+@media (max-width: 790px) {
+
+    .cascade-wrapper,
+    .cascade-wrapper-ultra {
+        display: inherit !important;
+    }
+}
+
+@keyframes blinkCustom {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    /* Fully visible */
+    50% {
+        opacity: 0;
+    }
+
+    /* Invisible */
+}
+
+.blink-custom {
+    animation: blinkCustom .5s ease-in-out 5
+}

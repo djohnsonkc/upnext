@@ -1,0 +1,77 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Open Sans", sans-serif !important;
+  font-size: 14px;
+  color: #333f48 !important;
+  background-color: #eef2f5 !important;
+
+  -ms-overflow-style: none;
+  /* for Internet Explorer, Edge */
+  scrollbar-width: none;
+  /* for Firefox */
+  overflow-y: scroll;
+}
+
+.inner-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background-color: #4CBB17;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s ease;
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+  
+    /* prevent mouse selection of the inner text */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+  }
+  
+  
+  .inner-circle.expand {
+    width: 250px;
+    height: 250px;
+  }
+  
+  
+  .outer-circle {
+    cursor: pointer;
+    height: 80px;
+    width: 80px;
+    position: absolute;
+    border-radius: 50%;
+    /* background-color: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1em;
+    color: #fff;
+    transition: background-color 0.3s;
+  }
+  .outer-circle.active {
+    background-color: #4CBB17;
+    border: solid 5px #4CBB17;
+    color: #4CBB17;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  }
+  .next-link {
+    font-size: 10px;
+    color: white;
+  }
+  
+  .for-teams {
+    font-size: 13px;
+  }
+  
